@@ -1,5 +1,5 @@
 # Welcome to your Expo app 👋
-we are making it using reactnative and firebase 
+we are making it using reactnative and firebase along with google api
 
 This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
 
