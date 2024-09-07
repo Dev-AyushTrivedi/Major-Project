@@ -11,6 +11,7 @@ export default function Login() {
             height:450
           }}
         />
+
         <View style={styles.container}>
           <Text style={{
             fontSize:28,
@@ -26,6 +27,7 @@ export default function Login() {
             marginTop:20
           }}>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero blanditiis minus sequi id maxime illum possimus, harum obcaecati, quasi quisquam molestias quos itaque, a accusantium.</Text>
           
+          
           <View style={styles.button}>
             <Text style={{color:Colors.WHITE,
               fontFamily:'outfit',
@@ -37,6 +39,7 @@ export default function Login() {
     </View>
   )
 }
+
 
 const styles = StyleSheet.create({
   container:{
