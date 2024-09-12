@@ -1,9 +1,9 @@
 import { View, Text, TextInput, StyleSheet, TouchableOpacity } from 'react-native'
 import React, { useEffect } from 'react'
 import { GesyureHandlerRooyView } from 'react-native-gesture-handler'
-import { useNavigation, useRouter } from '@react-navigation/native';
+// import { useNavigation, useRouter } from '@react-navigation/native';
+import { useNavigation, useRouter } from 'expo-router';
 import { Colors } from './../../../constants/Colors';
-// import { useNavigation, useRouter } from 'expo-router';
 
 export default function SignIn() {
   const navigation=useNavigation();
