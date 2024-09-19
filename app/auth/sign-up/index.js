@@ -14,18 +14,17 @@ export default function SignUp() {
     })
   },[])
   return (
-    <View>
-    style={{
-      padding:25,
-      paddingTop:50,
-      backgroundColor:Colors.WHITE,
-      height:'100%'
-    }}
+    <View style={{
+        padding:25,
+        paddingTop:50,
+        backgroundColor:Colors.WHITE,
+        height:'100%'
+    }}>
     
-      <TouchableOpacity> 
-        onPress={()=>router.back()}
+      <TouchableOpacity onPress={()=>router.back()}>
         <Ionicons name="arrow-back" size={24} color="black" />
       </TouchableOpacity>
+
       <Text style={{
         fontFamily:'outfit-bold',
         fontSize:30,
@@ -86,17 +85,17 @@ export default function SignUp() {
       
       {/* Create Account Button */}
       <TouchableOpacity
-        onPress={()=>router.replace('auth/sign-in')}
-      style={{
-          padding:20,
-          backgroundColor:Colors.WHITE,
-          borderRadius:15,
-          marginTop:20,
-          borderWidth:1
-          }}>
+        onPress={() => router.replace('auth/sign-in')}
+        style={{
+          padding: 20,
+          backgroundColor: Colors.WHITE,
+          borderRadius: 15,
+          marginTop: 20,
+          borderWidth: 1
+        }}>
         <Text style={{
-          color:Colors.PRIMARY,
-          textAlign:'center'
+          color: Colors.PRIMARY,
+          textAlign: 'center'
         }}>Sign In</Text>
       </TouchableOpacity>
     </View>

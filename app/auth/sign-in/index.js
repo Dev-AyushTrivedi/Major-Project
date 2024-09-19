@@ -12,7 +12,7 @@ export default function SignIn() {
   
   useEffect(()=>{
     navigation.setOptions({
-      HeaderShown: false
+      headerShown: false
     })
   },[])
 
@@ -23,7 +23,7 @@ export default function SignIn() {
       backgroundColor:Colors.WHITE,
       height:'100%'
     }}>
-      <TouchableOpacity> onPress={() =>router.back()}
+      <TouchableOpacity onPress={() =>router.back()}>
         <Ionicons name="arrow-back" size={24} color="black" />
       </TouchableOpacity>
       <Text style={{
