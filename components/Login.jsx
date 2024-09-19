@@ -37,7 +37,8 @@ export default function Login() {
             <Text style={{color:Colors.WHITE,
               fontFamily:'outfit',
               fontSize:17,
-              textAlign:'center'}}>Get Started
+              textAlign:'center'
+              }}>Get Started
             </Text>
           </TouchableOpacity>
         </View>

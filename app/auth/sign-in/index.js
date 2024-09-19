@@ -1,63 +1,80 @@
-import { View, Text, TextInput, StyleSheet, TouchableOpacity } from 'react-native'
+import { View, Text, TextInput, StyleSheet, TouchableOpacity, ViewComponent } from 'react-native'
 import React, { useEffect } from 'react'
 import { GesyureHandlerRooyView } from 'react-native-gesture-handler'
-// import { useNavigation, useRouter } from '@react-navigation/native';
+//import { useNavigation, useRouter } from '@react-navigation/native';
 import { useNavigation, useRouter } from 'expo-router';
 import { Colors } from './../../../constants/Colors';
+import Ionicons from '@expo/vector-icons/Ionicons';
 
 export default function SignIn() {
   const navigation=useNavigation();
   const router=useRouter();
+  
   useEffect(()=>{
     navigation.setOptions({
-      HeaderShown: false,
+      HeaderShown: false
     })
   },[])
+
   return (
     <View style={{
       padding:25,
-      paddingTop:80,
+      paddingTop:40,
       backgroundColor:Colors.WHITE,
       height:'100%'
     }}>
+      <TouchableOpacity> onPress={() =>router.back()}
+        <Ionicons name="arrow-back" size={24} color="black" />
+      </TouchableOpacity>
       <Text style={{
         fontFamily:'outfit-bold',
-        fontSize:30
+        fontSize:30,
+        marginTop:30
       }}>Let's Sign you In</Text>
+      
       <Text style={{
         fontFamily:'outfit',
         fontSize:30,
         color:Colors.GRAY,
         marginTop:20
       }}>Welcome back</Text>
+      
       <Text style={{
         fontFamily:'outfit',
         fontSize:30,
         color:Colors.GRAY,
         marginTop:10
       }}>You've been missed!</Text>
-
+      
+      
+      {/* Email */}
       <View style={{
-        marginTop:50,
+        marginTop:50
       }}>
         <Text style={{
           fontFamily:'outfit'
         }}>Email</Text>
-        <TextInput style={styles.input}
-        placeholder='Enter Your Email'/>
+        <TextInput 
+        style={styles.input}
+         placeholder='Enter Your Email' />
       </View>
-
+      
+      
+      {/* Password */}
       <View style={{
-        marginTop:20,
+        marginTop:20
       }}>
         <Text style={{
           fontFamily:'outfit'
         }}>Password</Text>
-        <TextInput  
+        <TextInput   
         secureTextEntry={true}
         style={styles.input}
-        placeholder='Enter Your Email'/>
+        placeholder='Enter Password'/>
       </View>
+
+      
+      {/* Sign In Button */}
       <View style={{
           padding:20,
           backgroundColor:Colors.PRIMARY,
@@ -70,6 +87,8 @@ export default function SignIn() {
         }}>Sign In</Text>
       </View>
 
+      
+      {/* Create Account Button */}
       <TouchableOpacity 
         onPress={()=>router.replace('auth/sign-up')}
       style={{
@@ -82,8 +101,9 @@ export default function SignIn() {
         <Text style={{
           color:Colors.PRIMARY,
           textAlign:'center'
-        }}>Sign In</Text>
+        }}>Create Account</Text>
       </TouchableOpacity>
+
     </View>
   )
 }
