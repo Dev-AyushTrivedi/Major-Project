@@ -21,7 +21,7 @@ export default function Login() {
             fontFamily: 'outfit-bold',
             textAlign:'center',
             marginTop:10
-          }}>AI Travel Planner</Text>
+          }}>GetSetGo</Text>
           <Text style={{
             fontFamily:'outfit',
             fontSize:17,
