@@ -1,5 +1,6 @@
 import { View, Text, StyleSheet, TextInput, TouchableOpacity, ToastAndroid } from 'react-native';
 import React, { useEffect, useState } from 'react';
+// import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { useNavigation, useRouter } from 'expo-router';
 import { Colors } from './../../../constants/Colors';
 import Ionicons from '@expo/vector-icons/Ionicons';

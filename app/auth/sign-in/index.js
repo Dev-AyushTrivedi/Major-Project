@@ -1,6 +1,6 @@
 import { View, Text, TextInput, StyleSheet, TouchableOpacity, ToastAndroid } from 'react-native';
 import React, { useEffect, useState } from 'react';
-import { GestureHandlerRootView } from 'react-native-gesture-handler';
+// import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { useNavigation, useRouter } from 'expo-router';
 import { Colors } from './../../../constants/Colors';
 import Ionicons from '@expo/vector-icons/Ionicons';
@@ -45,7 +45,7 @@ export default function SignIn() {
   };
 
   return (
-    <GestureHandlerRootView style={{ flex: 1 }}>
+    // <GestureHandlerRootView style={{ flex: 1 }}>
       <View style={{
         padding: 25,
         paddingTop: 40,
@@ -125,7 +125,7 @@ export default function SignIn() {
           }}>Create Account</Text>
         </TouchableOpacity>
       </View>
-    </GestureHandlerRootView>
+    // </GestureHandlerRootView>
   );
 }
 
