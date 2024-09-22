@@ -1,6 +1,5 @@
 import { View, Text, StyleSheet, TextInput, TouchableOpacity, ToastAndroid } from 'react-native';
 import React, { useEffect, useState } from 'react';
-// import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { useNavigation, useRouter } from 'expo-router';
 import { Colors } from './../../../constants/Colors';
 import Ionicons from '@expo/vector-icons/Ionicons';
@@ -34,6 +33,7 @@ export default function SignUp() {
   .then((userCredential) => {
     // Signed up 
     const user = userCredential.user;
+    router.replace('/mytrip')
     console.log(user);
     // ...
   })
