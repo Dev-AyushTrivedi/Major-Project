@@ -4,7 +4,7 @@ import {Colors} from './../../constants/Colors'
 import Ionicons from '@expo/vector-icons/Ionicons';
 import StartNewTripCard from '../../components/MyTrips/StartNewTripCard';
 export default function MyTrip() {
-    const [userTrips,setUserTrips]=useState({});
+    const [userTrips,setUserTrips]=useState([]);
 
     return (
         <View style={{
@@ -20,15 +20,16 @@ export default function MyTrip() {
                 justifyContent:'space-between'
             }}>
                 <Text style={{
-                    fontFamily:'outfit',
+                    fontFamily:'outfit-bold',
                     fontSize:35  
                 }}>My Trip </Text>
                 <Ionicons name="add-circle" size={58} color="black" />
             </View>
 
-            {userTrips?.length==0?
-              <StartNewTripCard/>
-              :null
+            {
+                userTrips.length==0?
+                <StartNewTripCard />
+                :null
             }
         </View>
     )

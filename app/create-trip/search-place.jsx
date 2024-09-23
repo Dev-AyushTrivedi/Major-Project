@@ -1,9 +1,10 @@
 import { View, Text } from 'react-native'
-import React, { useEffect } from 'react'
-import { useNavigation } from 'expo-router'
+import React from 'react'
+import { useEffect } from 'react';
+import { useNavigation } from 'expo-router';
 import { Colors } from '../../constants/Colors';
 
-export default function SearchPlace() {
+export default function SearchPlaces() {
 
     const navigation=useNavigation();
 
@@ -11,9 +12,10 @@ export default function SearchPlace() {
         navigation.setOptions({
             headerShown:true,
             headerTransparent:true,
-            headerTitle:'Search'
+            headerTitle:'Search Places',
+
         })
-    },[])
+    })
   return (
     <View 
     style={{
@@ -21,9 +23,8 @@ export default function SearchPlace() {
         paddingTop:75,
         backgroundColor:Colors.WHITE,
         height:'100%'
-    }}
-    >
-      <Text>sSearchPlace</Text>
+    }}>
+      <Text>SearchPlaces</Text>
     </View>
   )
 }
