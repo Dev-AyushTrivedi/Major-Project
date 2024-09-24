@@ -21,14 +21,14 @@ export default function SignIn() {
 
   const onSignIn = () => {
     if (!email || !password) {
-      ToastAndroid.show("Please enter email & password", ToastAndroid.LONG);
+      ToastAndroid.show("Please enter email & password", ToastAndroid.SHORT);
       return;
     }
 
     signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         const user = userCredential.user;
-        router.replace('/mytrip')
+        router.replace('/mytrip');
         console.log(user);
       })
       .catch((error) => {

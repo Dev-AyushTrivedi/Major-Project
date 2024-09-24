@@ -24,7 +24,7 @@ export default function SignUp() {
 
     if(!email&&!password&&!fullName)
     {
-      ToastAndroid.show("Please enter all details",ToastAndroid.LONG);
+      ToastAndroid.show("Please enter all details",ToastAndroid.SHORT);
       return ;
     }
 
@@ -33,7 +33,7 @@ export default function SignUp() {
   .then((userCredential) => {
     // Signed up 
     const user = userCredential.user;
-    router.replace('/mytrip')
+    router.replace('/mytrip');
     console.log(user);
     // ...
   })
